@@ -1,7 +1,4 @@
 # opskins-auth
-
-## Setup / Init
-
 ```js
 const Auth = require('opskins-auth')
 const auth = Auth('SOME_API_KEY')
@@ -15,34 +12,6 @@ auth
     // do somthing
   })
   .catch(console.error)
-```
-
-## Responses
-
-List of example responses for reference.
-
-### oauth-client
-
-```js
-{
-  "client_id": "ff371b045307",
-  "name": "TestApp2",
-  "redirect_uri": "http://localhost:1234",
-  "time_created": 1535407757,
-  "has_secret": true
-}
-```
-
-### token-resp
-
-```js
-{
-  "access_token": "AQAAAAQAAAAAAAVd4P////9Z3Sdf3C+GZhYgJzVwBLYfjo+n8LIAzj+JaAippILcmeX2e2o=",
-  "token_type": "bearer",
-  "expires_in": 1800,
-  "scope": "identity items",
-  "refresh_token": "6EnU6ZvGi5OoBcSpGs2V4PkcgfBgwr1V"
-}
 ```
 
 ## IOAuth API Methods
@@ -194,4 +163,31 @@ If you did not request permanent access to a user's account, then you don't need
 auth.revokeToken('some_client_token').then(token => {
   // do somthing...
 })
+```
+## Responses
+
+List of example responses for reference.
+
+### oauth-client
+
+```js
+{
+  "client_id": "ff371b045307",
+  "name": "TestApp2",
+  "redirect_uri": "http://localhost:1234",
+  "time_created": 1535407757,
+  "has_secret": true
+}
+```
+
+### token-resp
+
+```js
+{
+  "access_token": "AQAAAAQAAAAAAAVd4P////9Z3Sdf3C+GZhYgJzVwBLYfjo+n8LIAzj+JaAippILcmeX2e2o=",
+  "token_type": "bearer",
+  "expires_in": 1800,
+  "scope": "identity items",
+  "refresh_token": "6EnU6ZvGi5OoBcSpGs2V4PkcgfBgwr1V"
+}
 ```
