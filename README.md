@@ -17,7 +17,8 @@ auth
   .catch(console.error)
 ```
 
-## Response Models
+## Responses
+List of example responses for reference.
 
 ### oauth-client
 
@@ -33,7 +34,7 @@ auth
 
 ## IOAuth API Methods
 
-### createClient({[name], [redirect_uri]}, [can_keep_secret])
+### createClient({ [name], [redirect_uri] }, [can_keep_secret])
 
 Create a new OAuth client.
 
