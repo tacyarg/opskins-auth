@@ -33,6 +33,18 @@ List of example responses for reference.
 }
 ```
 
+### token-resp
+
+```js
+{
+  "access_token": "AQAAAAQAAAAAAAVd4P////9Z3Sdf3C+GZhYgJzVwBLYfjo+n8LIAzj+JaAippILcmeX2e2o=",
+  "token_type": "bearer",
+  "expires_in": 1800,
+  "scope": "identity items",
+  "refresh_token": "6EnU6ZvGi5OoBcSpGs2V4PkcgfBgwr1V"
+}
+```
+
 ## IOAuth API Methods
 
 ### createClient({ [name], [redirect_uri] }, [can_keep_secret])
@@ -140,6 +152,8 @@ auth
 
 Using a authorization code from the user authorization flow, you can exchange it for a bearer token.
 
+> Returns [Token](#token-resp) object.
+
 #### Required Arguments
 
 - `code` - the authorization code you received in your return URL
@@ -152,7 +166,9 @@ auth.accessToken('some_client_code').then(token => {
 
 ### refreshToken([refresh_token])
 
-If you have a refresh token (i.e. you've already authorized the user in the past), you can use it to get a new bearer token by POSTing with these urlencoded parameters:
+If you have a refresh token (i.e. you've already authorized the user in the past), you can use it to get a new bearer token.
+
+> Returns [Token](#token-resp) object.
 
 #### Required Arguments
 
@@ -167,6 +183,8 @@ auth.refreshToken('some_client_token').then(token => {
 ### revokeToken([token])
 
 If you did not request permanent access to a user's account, then you don't need to do anything to "sign the user out". Their bearer token will automatically expire. If you requested permanent access and received a refresh token, then when you no longer need access to the user's account, you should revoke the refresh token.
+
+> Returns [Token](#token-resp) object.
 
 #### Required Arguments
 
