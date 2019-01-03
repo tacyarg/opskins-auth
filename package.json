@@ -1,0 +1,12 @@
+{
+  "name": "opskins-auth",
+  "version": "1.0.0",
+  "description": "basic opskins authentication wrapper",
+  "main": "index.js",
+  "repository": "https://github.com/tacyarg/opskins-auth",
+  "author": "tacyarg",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
