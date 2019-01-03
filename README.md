@@ -6,8 +6,7 @@
 const Auth = require('opskins-auth')
 const auth = Auth('SOME_API_KEY')
 
-auth
-  .createClient({
+auth.createClient({
     name: 'Some Website',
     redirect_uri: 'https://auth.somewebsite.com',
   })
@@ -50,8 +49,7 @@ Create a new OAuth client.
 - `can_keep_secret` - Set this to 0 if your client cannot keep a secret and will maintain per-token secrets (see OAuth documentation). Default 1
 
 ```js
-auth
-  .createClient(
+auth.createClient(
     {
       name: 'Some Website',
       redirect_uri: 'https://auth.somewebsite.com',
@@ -123,8 +121,7 @@ Update an OAuth client that you own. At least one of name and redirect_uri is re
 - `redirect_uri` - URI to which users are redirected after approving or denying access
 
 ```js
-auth
-  .updateClient('some_client_id', {
+auth.updateClient('some_client_id', {
     name: 'Some Updated Website',
     redirect_uri: 'https://auth.someupdatedwebsite.com',
   })
