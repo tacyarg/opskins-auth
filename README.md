@@ -1,5 +1,5 @@
 # opskins-auth
-https://opskins.com/images/oauth-guide-v1.png
+REFERENCE DIAGRAM: https://opskins.com/images/oauth-guide-v1.png
 
 ```js
 const Auth = require('opskins-auth')
