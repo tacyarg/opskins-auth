@@ -1,7 +1,8 @@
 # opskins-auth
+
 ```js
 const Auth = require('opskins-auth')
-const auth = Auth('SOME_API_KEY')
+const auth = Auth('OPSKINS_API_KEY')
 
 auth
   .createClient({
@@ -164,6 +165,7 @@ auth.revokeToken('some_client_token').then(token => {
   // do somthing...
 })
 ```
+
 ## Responses
 
 List of example responses for reference.
