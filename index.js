@@ -1,12 +1,12 @@
-const API = require('./lib/call')
+const IOAuth = require('./lib/IOAuth')
+const Oauth = require('./lib/oauth')
+const assert = require('assert')
 
-module.exports = config => {
-  const api = API({
-    baseURL: 'https://oauth.opskins.com/v1/',
-    token: ''
-  })
+module.exports = key => {
+  assert(key, 'opskins api key required')
 
   return {
-    
+    ...IOAuth(key),
+    ...Oauth(),
   }
 }
